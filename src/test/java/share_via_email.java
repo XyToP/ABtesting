@@ -8,18 +8,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class copy_link {
-    @Test
-    public void copy_link() throws InterruptedException {
+/**
+ * Created by macbook on 2/24/17.
+ */
+public class share_via_email {
 
+    @Test
+    public void share_email() throws InterruptedException {
             WebDriver driver = new ChromeDriver();
-            WebDriver driver2 = new ChromeDriver();
 
 
             driver.manage().window().maximize();
-            driver2.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-            driver2.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 
             driver.get("https://void-sergey-hutornoy.myshopify.com/");
@@ -38,25 +38,16 @@ public class copy_link {
             driver.findElement(By.name("commit")).click();
 
 //share page
-
+            driver.findElement(By.cssSelector("a.button.is-block.js-email-form-toggle.ac-share-via-email")).click();
+            driver.findElement(By.id("email_recipient_list")).sendKeys("fr+" + (int) Math.ceil(Math.random() * 1000) + "@talkable.com");
 //sleep      Thread.sleep(5000);
-
+            driver.findElement(By.cssSelector("input.button.js-email-share-submit")).click();
 
 //click link
             driver.findElement(By.cssSelector("a.button.is-block.is-link.js-open-link-popup.ac-share-via-link")).click();
 
-//Claim page
-            driver2.get(driver.findElement(By.cssSelector("div.js-share-by-link.js-copy.share-link")).getAttribute("data-clipboard-text"));
-
-            driver2.findElement(By.cssSelector("a.button.is-block.is-large.ac-proceed-link")).click();
-            Thread.sleep(1000);
-
             driver.close();
             driver.quit();
-            driver2.close();
-            driver2.quit();
-
         }
     }
-
 
