@@ -43,8 +43,6 @@ public class share_via_email {
 //sleep      Thread.sleep(5000);
             driver.findElement(By.cssSelector("input.button.js-email-share-submit")).click();
 
-//click link
-            driver.findElement(By.cssSelector("a.button.is-block.is-link.js-open-link-popup.ac-share-via-link")).click();
 
             driver.close();
             driver.quit();
