@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestRule;
@@ -32,12 +33,15 @@ public class share_via_email {
         Advocate.TypeAdvocateEmail();
         Advocate.ClickOnLoginButton();
 
-//share page
+//share page  + (int) Math.ceil(Math.random() * 1000) + "
             driver.findElement(By.cssSelector("a.button.is-block.js-email-form-toggle.ac-share-via-email")).click();
-            driver.findElement(By.id("email_recipient_list")).sendKeys("fr+" + (int) Math.ceil(Math.random() * 1000) + "@talkable.com");
+
+            driver.findElement(By.id("email_recipient_list")).sendKeys("fr+01@talkable.com");
 //sleep      Thread.sleep(5000);
             driver.findElement(By.cssSelector("input.button.js-email-share-submit")).click();
+// /7poBepKa
 
+            Assert.assertEquals("Sent successfully", driver.findElement(By.cssSelector("div.js-response-notice.validation.is-success")).getText());
 
             driver.close();
             driver.quit();

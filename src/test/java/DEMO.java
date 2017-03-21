@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestRule;
@@ -27,6 +28,13 @@ public class DEMO {
         Advocate.TypeAdvocateName();
         Advocate.TypeAdvocateEmail();
         Advocate.ClickOnLoginButton();
+//check
+        if (driver.findElement(By.cssSelector("a.button.is-block.js-email-form-toggle.ac-share-via-email")).isDisplayed()) {
+            System.out.println("Pass");
+        } else {
+            System.out.println("Fail");
+        }
+
 
 
         driver.close();

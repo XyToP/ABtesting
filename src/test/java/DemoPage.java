@@ -10,7 +10,7 @@ public class DemoPage {
     WebDriver driver;
     WebDriverWait wait;
 
-    String url=("https://void-sergey-hutornoy.myshopify.com/");
+    String url=("http://learn.talkable.com/QA-Sergey/demo-2/menu/home.html");
 
     By fw = By.cssSelector("a.campaign-trigger-content.js-trigger-offer");
     By adname = By.id("affiliate_member_first_name");
