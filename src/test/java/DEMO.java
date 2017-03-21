@@ -11,16 +11,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by macbook on 2/24/17.
- */
-public class share_via_email {
-
+public class DEMO {
     @Test
-    public void share_email() throws InterruptedException {
+    public void Advocate_signUp() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, 20);
- //       driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
 
@@ -32,15 +28,9 @@ public class share_via_email {
         Advocate.TypeAdvocateEmail();
         Advocate.ClickOnLoginButton();
 
-//share page
-            driver.findElement(By.cssSelector("a.button.is-block.js-email-form-toggle.ac-share-via-email")).click();
-            driver.findElement(By.id("email_recipient_list")).sendKeys("fr+" + (int) Math.ceil(Math.random() * 1000) + "@talkable.com");
-//sleep      Thread.sleep(5000);
-            driver.findElement(By.cssSelector("input.button.js-email-share-submit")).click();
 
-
-            driver.close();
-            driver.quit();
-        }
+        driver.close();
+        driver.quit();
     }
 
+}

@@ -56,6 +56,7 @@ public class ideal_sale {
 //            Thread.sleep(5000);
             driver2.findElement(By.cssSelector("button#AddToCart.btn.btn--flipped")).click();
             driver2.findElement(By.cssSelector("input.btn.checkout")).click();
+            Thread.sleep(3000);
             driver2.findElement(By.id("checkout_email")).sendKeys("pp" + (int) Math.ceil(Math.random() * 1000) + "@talkable.com");
 
             driver2.findElement(By.id("checkout_shipping_address_last_name")).sendKeys("pp" + (int) Math.ceil(Math.random() * 1000) + "generated");
