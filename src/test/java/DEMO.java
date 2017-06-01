@@ -14,10 +14,9 @@ import java.util.concurrent.TimeUnit;
 
 public class DEMO {
     @Test
-    public void Advocate_signUp() throws InterruptedException {
+    public void Advocate_signUp() {
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, 20);
-//        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
 

@@ -10,7 +10,7 @@ public class DemoPage {
     WebDriver driver;
     WebDriverWait wait;
 
-    String url=("http://learn.talkable.com/QA-Sergey/demo-2/menu/home.html");
+    String url=("http://learn.talkable.com/QA-Sergey/bart/home.html");
 
     By fw = By.cssSelector("a.campaign-trigger-content.js-trigger-offer");
     By adname = By.id("affiliate_member_first_name");
@@ -42,7 +42,7 @@ public class DemoPage {
     }
     public void TypeAdvocateEmail()
     {
-        driver.findElement(ademail).sendKeys("ad" + (int) Math.ceil(Math.random() * 1000) + "@talkable.com");
+        driver.findElement(ademail).sendKeys("ad" + (int) Math.ceil(Math.random() * 1000) + "@gmail.com");
     }
     public void ClickOnLoginButton()
     {

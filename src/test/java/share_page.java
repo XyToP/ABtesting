@@ -10,18 +10,18 @@ import java.util.concurrent.TimeUnit;
 
 public class share_page {
     @Test
-    public void sign_up() throws InterruptedException {
+    public void sign_up()throws InterruptedException{
         WebDriver driver = new ChromeDriver();
 
 
-        driver.manage().window().maximize();
+
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 
-        driver.get("https://void-sergey-hutornoy.myshopify.com/");
+        driver.get("http://learn.talkable.com/QA-Sergey/bart/dashboard.html");
 //click fw
-
-        driver.switchTo().frame(0);
+        Thread.sleep(5000);
+ /*     driver.switchTo().frame(0);
 
         driver.findElement(By.cssSelector("a.campaign-trigger-content.js-trigger-offer")).click();
         driver.switchTo().parentFrame();
@@ -32,7 +32,7 @@ public class share_page {
         driver.findElement(By.name("affiliate_member[email]")).sendKeys("ad" + (int) Math.ceil(Math.random() * 1000) + "@talkable.com");
 
         driver.findElement(By.name("commit")).click();
-
+*/
         driver.close();
         driver.quit();
     }

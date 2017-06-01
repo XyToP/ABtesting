@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class share_via_email {
 
     @Test
-    public void share_email() throws InterruptedException {
+    public void share_email() {
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, 20);
  //       driver.manage().window().maximize();
@@ -36,7 +36,7 @@ public class share_via_email {
 //share page  + (int) Math.ceil(Math.random() * 1000) + "
             driver.findElement(By.cssSelector("a.button.is-block.js-email-form-toggle.ac-share-via-email")).click();
 
-            driver.findElement(By.id("email_recipient_list")).sendKeys("fr+01@talkable.com");
+            driver.findElement(By.id("email_recipient_list")).sendKeys("fr"+ (int) Math.ceil(Math.random() * 1000) + "@talkable.com");
 //sleep      Thread.sleep(5000);
             driver.findElement(By.cssSelector("input.button.js-email-share-submit")).click();
 // /7poBepKa
